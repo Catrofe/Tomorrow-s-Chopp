@@ -1,7 +1,4 @@
 #Tomorrow's Chopp
-<<<<<<< Updated upstream
-if __name__ == '__main__':
-=======
 from Manager_Storage import ManagerEstoque
 from Validation_solding import Vendas
 from time import sleep
@@ -41,28 +38,25 @@ if __name__ == '__main__':
                     qnt_canecas = qnt_chopp_solicitado
                     print("Insira o numero do seu cartão")
                     num_cartao = input()
-                    saldo_cartao = 100
-                    nova_venda = Vendas(qnt_chopp_solicitado, num_cartao, saldo_cartao)
+                    # saldo_cartao = 100
+                    nova_venda = Vendas(qnt_chopp_solicitado, num_cartao)
                     estoque_verificado = estoque_iniciado.verificar_estoque(qnt_chopp_solicitado)
                     if estoque_verificado == True:  
                         venda_verificada = nova_venda.VerificarVendas()
                         if venda_verificada == True:
-                            nova_venda.RetirarSaldo(qnt_chopp_solicitado)
+                            estoque_iniciado.venda_executada()
                             print("Aqui está seu chopp!")
                         else:
                             print("Você não tem dinheiro suficiente.")
                     else:
                         print("Estoque Insuficiente para venda. Favor contatar o gerente.")
-            elif opcao1 == 2:
-                estoque_iniciado.acrescentar_litros()
-            elif opcao1 == 3:
-                estoque_iniciado.acrescentar_canecas()
-            elif opcao1 == 4:
-                print("Em desenvolvimento.")
-            elif opcao1 == 5:
-                print("Em desenvolvimento.")
-            else:
-                print("Invalido.")
-
-    
->>>>>>> Stashed changes
+        elif opcao1 == 2:
+            estoque_iniciado.acrescentar_litros()
+        elif opcao1 == 3:
+            estoque_iniciado.acrescentar_canecas()
+        elif opcao1 == 4:
+            print("Em desenvolvimento.")
+        elif opcao1 == 5:
+            print("Em desenvolvimento.")
+        else:
+            print("Invalido.")
