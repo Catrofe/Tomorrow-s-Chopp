@@ -36,4 +36,4 @@ See also the list of [contributors](https://github.com/Catrofe/Tomorrow-s-Chopp/
 
 ## Screenshot
 
-![Screen do projeto](./screen.png)
+![Screen do projeto](./screen.PNG)
