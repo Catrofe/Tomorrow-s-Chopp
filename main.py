@@ -8,7 +8,7 @@ if __name__ == '__main__':
     sleep(2)
     print("Insira a quantidade de chopp disponíveis.")
     litros =  float(input())
-    sleep(0.5) 
+    sleep(0.5)
     print("Insira a quantidade de canecas disponíveis.")
     canecas = int(input())
     sleep(0.5)
@@ -28,8 +28,8 @@ if __name__ == '__main__':
 
         if opcao1 == 1:
             if litros and canecas > 0:
+                senhadegerente = 1707
                 while True:
-                    senhadegerente = 1707
                     print("Bem vindo ao Tomorrow's Chopp")
                     print("Quantos chopps o senhor(a)deseja?")
                     qnt_chopp_solicitado = int(input())
@@ -54,9 +54,7 @@ if __name__ == '__main__':
             estoque_iniciado.acrescentar_litros()
         elif opcao1 == 3:
             estoque_iniciado.acrescentar_canecas()
-        elif opcao1 == 4:
-            print("Em desenvolvimento.")
-        elif opcao1 == 5:
+        elif opcao1 in {4, 5}:
             print("Em desenvolvimento.")
         else:
             print("Invalido.")
